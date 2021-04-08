@@ -29,10 +29,14 @@ var button = d3.select("#filter-btn");
 
 var inputField = d3.select("#form-control");
 
-//Install Event Handler associated with clicking the button
-function filterClick() {
-    console.log("The button was clicked!");
+//Install Event Handler associated with clicking the button using an anonymous callback
+button.on("click", function() {
+    console.log("A button was clicked");
     console.log(d3.event.target);
-}
+});
 
-button.on("click", filterClick);
+//Change the event once new text is entered in the input field
+inputField.on("change", function() {
+    var newText = d3.event.target.value;
+    console.log(newText);
+});
