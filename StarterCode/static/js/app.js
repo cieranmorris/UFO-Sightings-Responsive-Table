@@ -23,3 +23,16 @@ data.forEach(function(ufoSightings) {
         cell.text(value);
     });
 });
+
+//Get a reference to the Filter Table button and input field using d3
+var button = d3.select("#filter-btn");
+
+var inputField = d3.select("#form-control");
+
+//Install Event Handler associated with clicking the button
+function filterClick() {
+    console.log("The button was clicked!");
+    console.log(d3.event.target);
+}
+
+button.on("click", filterClick);
