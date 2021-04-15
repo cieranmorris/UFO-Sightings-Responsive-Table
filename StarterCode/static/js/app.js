@@ -28,7 +28,7 @@ function filterTable() {
 
     //Install d3 function to prevent page from reloading when new data is entered
     d3.event.preventDefault();
-    console.log("I am going to filter data");
+    console.log("filtering by date data now");
 
    var inputField = d3.select("#datetime");
    var inputValue = inputField.property("value");
@@ -55,7 +55,7 @@ function filterTableCity() {
 
     //prevent reloading of page
     d3.event.preventDefault();
-    console.log("filtering city data now");
+    console.log("filtering by city data now");
 
     var cityInputField = d3.select("#city");
     var cityInputValue = cityInputField.property("value");
@@ -81,10 +81,10 @@ function filterTableState() {
 
     //prevent reloading of page
     d3.event.preventDefault();
-    console.log("filter state data now");
+    console.log("filtering by state data now");
 
     var stateInputField = d3.select("#state");
-    var stateInputValue = stateInputField.porperty("value");
+    var stateInputValue = stateInputField.property("value");
     console.log(stateInputValue);
 
     //filter data table based on the input value (state)
@@ -102,6 +102,60 @@ function filterTableState() {
    buildTable(stateFilteredData);
 
 };
+
+//filter table function for country
+function filterTableCountry() {
+
+    //prevent page from reloading
+    d3.event.preventDefault();
+    console.log("filtering by country data now");
+
+    var countryInputField = d3.select("#country");
+    var countryInputValue = countryInputField.property("value");
+    console.log(countryInputValue);
+
+    //filter data table based on the input value (country)
+   // create variable so that if inputValue is deleted, the page reverts to the original table
+   var countryFilteredData = tableData;
+   if (countryInputValue != "") {
+
+    var countryFilteredData = tableData.filter(function(ufoRow) {
+        if (countryInputValue === ufoRow.country) {
+            return true;
+        }
+    });
+   };
+
+   buildTable(countryFilteredData);
+};
+
+
+//filter table function for shape
+function filterTableShape() {
+
+    //prevent reloading of page
+    d3.event.preventDefault();
+
+    console.log("filtering by shape data now");
+
+    var shapeInputField = d3.select("#shape");
+    var shapeInputValue = shapeInputField.property("value");
+    console.log(shapeInputValue);
+
+    //filter data table based on the input value (shape)
+   // create variable so that if inputValue is deleted, the page reverts to the original table
+   var shapeFilteredData = tableData;
+   if (shapeInputValue != "") {
+
+    var shapeFilteredData = tableData.filter(function(ufoRow) {
+        if (shapeInputValue === ufoRow.country) {
+            return true;
+        }
+    });
+   };
+
+   buildTable(shapeFilteredData);
+}
 
 
 // Get a reference to the table body
