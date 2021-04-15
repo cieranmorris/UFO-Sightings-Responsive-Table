@@ -81,8 +81,27 @@ function filterTableState() {
 
     //prevent reloading of page
     d3.event.preventDefault();
-    
-}
+    console.log("filter state data now");
+
+    var stateInputField = d3.select("#state");
+    var stateInputValue = stateInputField.porperty("value");
+    console.log(stateInputValue);
+
+    //filter data table based on the input value (state)
+   // create variable so that if inputValue is deleted, the page reverts to the original table
+   var stateFilteredData = tableData;
+   if (stateInputValue != "") {
+
+    var stateFilteredData = tableData.filter(function(ufoRow) {
+        if (stateInputValue === ufoRow.state) {
+            return true;
+        }
+    });
+   };
+
+   buildTable(stateFilteredData);
+
+};
 
 
 // Get a reference to the table body
