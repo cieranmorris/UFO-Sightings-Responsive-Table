@@ -50,6 +50,40 @@ function filterTable() {
    buildTable(filteredData);
 };
 
+//filter table function for city
+function filterTableCity() {
+
+    //prevent reloading of page
+    d3.event.preventDefault();
+    console.log("filtering city data now");
+
+    var cityInputField = d3.select("#city");
+    var cityInputValue = cityInputField.property("value");
+    console.log(cityInputValue);
+
+    //filter data table based on the input value (city)
+   // create variable so that if inputValue is deleted, the page reverts to the original table
+   var cityFilteredData = tableData;
+   if (cityInputValue != "") {
+
+    var cityFilteredData = tableData.filter(function(ufoRow) {
+        if (cityInputValue === ufoRow.city) {
+            return true;
+        }
+    });
+   };
+   
+   buildTable(cityFilteredData);
+};
+
+//filter table function for state
+function filterTableState() {
+
+    //prevent reloading of page
+    d3.event.preventDefault();
+    
+}
+
 
 // Get a reference to the table body
 var tbody = d3.select("tbody");
