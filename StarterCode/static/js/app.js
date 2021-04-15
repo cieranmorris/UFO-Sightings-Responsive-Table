@@ -54,8 +54,8 @@ function filterTable() {
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 buildTable(tableData);
-// // YOUR CODE HERE!
-// console.log(data);
+
+
 //Get a reference to the Filter Table button and input field using d3
 var button = d3.select("#filter-btn");
 
