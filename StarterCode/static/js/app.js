@@ -25,6 +25,9 @@ function buildTable(sightings) {
 
 // Build filter table function
 function filterTable() {
+
+    //Install d3 function to prevent page from reloading when new data is entered
+    d3.event.preventDefault();
     console.log("I am going to filter data");
 
    var inputField = d3.select("#datetime");
