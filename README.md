@@ -8,20 +8,20 @@ There is just one tiny problem though... our collection is too large to search t
 
 ### Accomplished: Automatic Table and Data Search using Multiple Search Categories
 
-* Primary coding languages used within this repository: JavaScript, HTML, CSS, and D3.js.
+* Primary coding languages used within this repository: JavaScript(specifically including D3.js), HTML, and CSS.
 
 * Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
 
 * Using the UFO dataset provided in the form of an array of JavaScript objects, I successfully wrote code that dynamically appends a table to the web page, which automatically updates with new rows of data for each UFO sighting.
 
-  * Columns included in the table contain data relating to `date/time`, `city`, `state`, `country`, `shape`, and `comment` per UFO sighting.
+  * Columns included in the table contain data relating to `date`, `city`, `state`, `country`, `shape`, and `comment` per UFO sighting.
 
 * Utilizing a date form in my HTML document, I effeciently wrote JavaScript code that listens for events and searches through the `date/time` column to find rows that match user input.
 
 
 * Additionally, with the application of multiple `input` tags within the form function, I generated JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
-  1. `date/time`
+  1. `date`
   2. `city`
   3. `state`
   4. `country`
