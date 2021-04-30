@@ -8,7 +8,7 @@ In this project, I utilized my experience in JavaScript and HTML to transform a 
 
 * Primary coding languages used within this repository: JavaScript(specifically including D3.js), HTML, and CSS.
 
-* Create a basic HTML web page or use the [index.html](StarterCode/index.html) file provided (we recommend building your own custom page!).
+* To construct my initial web page, I used the provided [index.html](StarterCode/index.html) file.
 
 * Using the UFO dataset provided in the form of an array of JavaScript objects, I successfully wrote code that dynamically appends a table to the web page, which automatically updates with new rows of data for each UFO sighting.
 
