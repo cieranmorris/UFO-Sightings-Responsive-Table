@@ -1,12 +1,10 @@
 # JavaScript and DOM Manipulation
 
-## Background
+## Background Information
 
-WAKE UP SHEEPLE! The extra-terrestrial menace has come to Earth and we here at `ALIENS-R-REAL` have collected all of the eye-witness reports we could to prove it! All we need to do now is put this information online for the world to see and then the matter will finally be put to rest.
+In this project, I utilized my experience in JavaScript and HTML to transform a large dataset containing UFO sightings across the United States, Canada, and Australia into a dynamic web page for a user to filter through. The importance of this visualization was the manipulation of large dataset into a table that updates and displays results automatically, to streamline the efforts of the user as opposed to sorting through all the results manually. 
 
-There is just one tiny problem though... our collection is too large to search through manually. Even our most dedicated followers are complaining that they are having trouble locating specific reports in this mess.
-
-### Accomplished: Automatic Table and Data Search using Multiple Search Categories
+## Automatic Table and Data Search using Multiple Search Categories
 
 * Primary coding languages used within this repository: JavaScript(specifically including D3.js), HTML, and CSS.
 
